@@ -3,20 +3,17 @@ import { FC } from 'react';
 
 export interface SearchProps{
   device: string;
-  searchKeyword: string;
+  searchResult: any;
 }
 
 export const Search: FC<SearchProps> = ({
   device,
-  searchKeyword
+  searchResult
 }): JSX.Element => {
   return (
-    <div className="main" style={{
-      backgroundColor:'gray'
-    }}>
-      <div className="copy-wrapper">
-        <h1>{searchKeyword}</h1>
-      </div>
+    <div className={device == 'PC' ? "main-search" : "main-search-smartphone"}>
+      <h1>よく聴くアーティストを選択してください</h1>
+      {searchResult}
     </div>
   );
 };

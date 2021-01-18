@@ -1,18 +1,19 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export interface HomeProps{
   device: string;
   keyword: string;
   setKeyword: any;
-  onSubmit: () => void;
+  onClick: () => void;
 }
 
 export const Home: FC<HomeProps> = ({
   device,
   keyword,
   setKeyword,
-  onSubmit
+  onClick
 }): JSX.Element => {
 
   return (
@@ -24,22 +25,20 @@ export const Home: FC<HomeProps> = ({
         <h1 style={{
           paddingBottom: "20px",
           fontSize:
-            device == 'smartphone' ? '20px': ''
-        }}>自分の音域に合ったアーティストは？</h1>
+            device == 'smartphone' ? '20px': '50px'
+        }}>自分の趣味に合ったアーティストは？</h1>
         <h2 style={{
           fontSize:
             device == 'smartphone' ? '15px': '',
-        }}>新しい歌との出会いの手助けをします。</h2>
+        }}>新しいアーティストとの出会いの手助けをします</h2>
       </div>
       <div className="input-form">
-        <h3>よく歌うアーティストを入力してください</h3>
-        <form action="/search" onSubmit={onSubmit}>
-          <input className="input-txt"
-            type="text"
-            value={keyword}
-            onChange={event => setKeyword(event.target.value)} />
-          <input className="btn" type="submit" value="検索" />
-        </form>
+        <h3>よく聴くアーティストを入力してください</h3>
+        <input className="input-txt"
+          type="text"
+          value={keyword}
+          onChange={event => setKeyword(event.target.value)} />
+        <Link to="/search" type="button" className="btn" onClick={onClick}>検索</Link>
       </div>
     </div>
   );

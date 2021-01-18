@@ -3,7 +3,9 @@ import { useDispatch, useSelector, connect } from 'react-redux';
 import { Home } from '../component/Home';
 import { CombineState } from '../reducers/index';
 import MediaQuery from "react-responsive";
-import { inputText } from '../action/action';
+import { updateState } from '../action/action';
+import { Link } from 'react-router-dom';
+
 
 
 export const HomeContainer: FC = (
@@ -11,22 +13,22 @@ export const HomeContainer: FC = (
   const reduxState = useSelector((state:CombineState) => state);
   const [keyword, setKeyword] = useState<string>('');
   const dispatch = useDispatch();
-  const onSubmit = () => {
-    dispatch(inputText({ text: keyword }));
+  const onClick = () => {
+    dispatch(updateState({ text: keyword ,id:''}));
   }
 
   return (
     <div className="container">
       <header>
         <img src='images/icon.png' />
-        <h1><a href="/">rcmArtist</a></h1>
+        <h1><Link to="/">rcmArtist</Link></h1>
       </header>
-      <MediaQuery query="(min-width: 670px)">　
+      <MediaQuery query="(min-width: 670px)">
         <Home
           device={'PC'}
           keyword={keyword}
           setKeyword={setKeyword}
-          onSubmit={onSubmit}
+          onClick={onClick}
         />
       </MediaQuery>
       {/* スマホ向けデザイン */}
@@ -35,7 +37,7 @@ export const HomeContainer: FC = (
           device={'smartphone'}
           keyword={keyword}
           setKeyword={setKeyword}
-          onSubmit={onSubmit}
+          onClick={onClick}
         />
       </MediaQuery>
       <footer>

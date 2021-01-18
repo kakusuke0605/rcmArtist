@@ -1,8 +1,8 @@
-export const SEND_TEXT = 'SENT_TEXT';
+export const UPDATE_STATE = 'UPDATE_STATE';
 
-export const inputText = (result: { text: string }) => ({
-  type: SEND_TEXT,
+export const updateState = (result: { text: string,id:string }) => ({
+  type: UPDATE_STATE,
   payload: result,
 })
 
-export type TextAction = ReturnType<typeof inputText>
+export type TextAction = ReturnType<typeof updateState>;

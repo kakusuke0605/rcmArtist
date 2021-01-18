@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import textreducer from './textreducer';
 
 export interface CombineState {
-  Keyword: {text:string};
+  Keyword: {text:string, id:string};
 }
 
 const rootReducer = combineReducers({
