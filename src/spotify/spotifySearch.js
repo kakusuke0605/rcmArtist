@@ -4,7 +4,7 @@ import { useSearch } from "react-spotify-api";
 import { updateState } from '../action/action';
 import { ArtistCard } from '../atoms/artistCard';
 
-//SpotifyAPIを叩いて検索結果がを取得する
+//SpotifyAPIを叩いて検索結果を取得する
 export const getSearchResult = (searchKeyword) => {
   const { data, loading, error } = useSearch(searchKeyword, { artist: true, limit: 10 });
   const reduxState = useSelector((state) => state);

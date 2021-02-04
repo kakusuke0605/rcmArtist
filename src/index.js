@@ -8,11 +8,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import rootReducer from "./reducers/index";
 import { SpotifyApiContext } from 'react-spotify-api';
+import { spotifyApiAccessToken } from './config/spotify';
 
 const store = createStore(rootReducer);
 
 ReactDOM.render(
-  <SpotifyApiContext.Provider value={'YOUR_ACCECCTOKEN'}>
+  <SpotifyApiContext.Provider value={spotifyApiAccessToken}>
     <BrowserRouter>
       <Provider store={store}>
         <App />
