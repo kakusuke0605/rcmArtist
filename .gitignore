@@ -62,4 +62,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #アクセストークン
-/config
+/src/config
