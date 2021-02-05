@@ -1,4 +1,4 @@
-自分用メモ
+#自分用メモ
 
 1. spotyfyのauthorization_codeのapp.jsをnode app.jsで起動して、
 
