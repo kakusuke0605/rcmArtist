@@ -9,6 +9,7 @@ export interface ArtistCardProps {
   artistId: string;
   dispatch: any;
   nowState: { text: string, id: string };
+  nowPage: string;
 }
 
 export const ArtistCard: FC<ArtistCardProps> = ({
@@ -17,11 +18,16 @@ export const ArtistCard: FC<ArtistCardProps> = ({
   artistName,
   artistId,
   dispatch,
-  nowState
+  nowState,
+  nowPage,
 }) => (
-  <Link to='/result'
+  <Link to={nowPage=='search'?'/result':'/detail'}
     className={device == 'PC' ? 'artistCard' : 'artistCard-smartphone'} onClick={() => {
-    dispatch(updateState({ text: nowState.text, id: artistId }));
+      if (nowPage == 'search') {
+        dispatch(updateState({ text: nowState.text, id: artistId ,lastId:''}));
+      } else if (nowPage == 'result') {
+        dispatch(updateState({ text: nowState.text, id: nowState.id, lastId: artistId }));
+      }
   }}>
     <img src={artistImageRef} />
     <p>{artistName}</p>

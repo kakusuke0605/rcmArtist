@@ -4,11 +4,13 @@ import { Reducer } from 'redux';
 interface Keyword{
   text: string;
   id: string;
+  lastId: string;
 }
 
 const initialState: Keyword = {
   text: 'initialText',
-  id :'initialId'
+  id: 'initialId',
+  lastId: 'initialLastId'
 };
 
 
@@ -25,6 +27,7 @@ const textreducer: Reducer<
           ...state,
           text: action.payload.text,
           id: action.payload.id,
+          lastId:action.payload.lastId,
         });
       default: {
         return state;

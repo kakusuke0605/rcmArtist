@@ -20,7 +20,7 @@ div {
 }
 
 body {
-  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 
 li {
@@ -127,16 +127,16 @@ footer {
   display: block;
   height: auto;
   margin: 0 auto;
-  padding:100px 50px 50px 50px;
+  padding: 100px 50px 50px 50px;
   text-shadow: 0 0 20px #000;
 }
 
-.main-search div{
+.main-search div {
   display: inline-block;
   width: 50%;
 }
 
-.main-search h1{
+.main-search h1 {
   color: white;
   margin-bottom: 50px;
   text-align: center;
@@ -149,8 +149,8 @@ footer {
   display: inline-block;
   height: 200px;
   margin: 0 1% 20px 1%;
-  position:relative;
-  text-align:left;
+  position: relative;
+  text-align: left;
   transition: all 0.5s;
   vertical-align: middle;
   width: 98%;
@@ -167,26 +167,26 @@ footer {
   width: 200px;
 }
 
-.artistCard p{
+.artistCard p {
   font-size: 20px;
-  left:50%;
-  position:absolute;
-  top:50%;
-  transform:translate(-0%,-50%);
-  width:50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  width: 50%;
 }
 
 /* searchのスタイル(smartphone) */
-.main-search-smartphone{
+.main-search-smartphone {
   background-color: gray;
   display: block;
   height: auto;
   margin: 0 auto;
-  padding:100px 20px 50px 20px;
+  padding: 100px 20px 50px 20px;
   text-shadow: 0 0 20px #000;
 }
 
-.main-search-smartphone h1{
+.main-search-smartphone h1 {
   color: white;
   font-size: 25px;
   margin-bottom: 50px;
@@ -200,8 +200,8 @@ footer {
   display: inline-block;
   height: 150px;
   margin: 0 1% 20px 1%;
-  position:relative;
-  text-align:left;
+  position: relative;
+  text-align: left;
   transition: all 0.5s;
   vertical-align: middle;
   width: 98%;
@@ -218,11 +218,142 @@ footer {
   width: 150px;
 }
 
-.artistCard-smartphone p{
+.artistCard-smartphone p {
   font-size: 20px;
-  left:50%;
-  position:absolute;
-  top:50%;
-  transform:translate(-0%,-50%);
-  width:50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  width: 50%;
+}
+
+/* resultのスタイル */
+.main-result {
+  background-color: gray;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 50px 50px 50px;
+  text-shadow: 0 0 20px #000;
+}
+
+.relatedCardContainer {
+  display: inline-block;
+  width: 50%;
+}
+
+.main-result h1 {
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-result-smartphone {
+  background-color: gray;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 20px 50px 20px;
+  text-shadow: 0 0 20px #000;
+}
+
+.main-result-smartphone h1 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* detailのスタイル */
+
+.main-detail {
+  background-color: gray;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 50px 50px 50px;
+  text-shadow: 0 0 20px #000;
+}
+
+.main-detail h1 {
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-detail-smartphone {
+  background-color: gray;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 20px 50px 20px;
+  text-shadow: 0 0 20px #000;
+}
+
+.main-detail-smartphone h1 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.react-player {
+  float: right;
+}
+
+.artistCard-wrapper {
+  display: inline-block;
+  width: 50%;
+}
+
+.detail-title {
+  background-color: gray;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 20px 20px 20px;
+  text-shadow: 0 0 20px #000;
+}
+
+.detail-title h1 {
+  color: white;
+  text-align: center;
+}
+
+.backbtn-wrpper {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.backbtn {
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #000;
+  color: #000;
+  display: block;
+  padding: 10px 40px;
+}
+
+.backbtn:active {
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+.one-backbtn {
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #000;
+  color: #000;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 40px;
+}
+
+.one-backbtn:active {
+  box-shadow: none;
+  position: relative;
+  top: 5px;
 }

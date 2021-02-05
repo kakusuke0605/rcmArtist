@@ -23,6 +23,7 @@ export const getSearchResult = (searchKeyword) => {
             artistId={artist.id}
             dispatch={dispatch}
             nowState={nowState}
+            nowPage='search'
         />
         </MediaQuery>
         <MediaQuery query="(max-width: 1000px)">
@@ -33,6 +34,7 @@ export const getSearchResult = (searchKeyword) => {
             artistId={artist.id}
             dispatch={dispatch}
             nowState={nowState}
+            nowPage='search'
         />
         </MediaQuery>
       </div>

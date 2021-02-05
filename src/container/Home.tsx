@@ -14,7 +14,7 @@ export const HomeContainer: FC = (
   const [keyword, setKeyword] = useState<string>('');
   const dispatch = useDispatch();
   const onClick = () => {
-    dispatch(updateState({ text: keyword ,id:''}));
+    dispatch(updateState({ text: keyword ,id:'', lastId: ''}));
   }
 
   return (

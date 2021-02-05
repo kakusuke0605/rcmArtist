@@ -14,7 +14,6 @@ export const SearchContainer: FC = (
   const reduxState = useSelector((state: CombineState) => state);
   const searchKeyword = reduxState.Keyword.text;
   const searchResult = getSearchResult(searchKeyword);
-  console.log(searchResult);
 
 
   return (
