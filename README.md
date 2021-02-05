@@ -1,7 +1,13 @@
-spotyfyのauthorization_codeのapp.jsをnode app.jsで起動して、ブラウザlocalhost:8888にアクセスしてアクセスキーを取得
+自分用メモ
 
-src/index.jsにアクセスキーを入力し、npm run buildでコンパイルののち、functionsでnpm run emulators:startでエミュレーターを起動
+1. spotyfyのauthorization_codeのapp.jsをnode app.jsで起動して、
 
-localhost:5000にアクセス
+   ブラウザlocalhost:8888にアクセスしてアクセスキーを取得
 
-デプロイする場合はfirebase deploy --only hostings
+1. src/index.jsにアクセスキーを入力し、npm run buildでコンパイルののち、
+  
+   functionsでnpm run emulators:startでエミュレーターを起動
+
+1. localhost:5000にアクセス
+
+1. デプロイする場合はfirebase deploy --only hostings
