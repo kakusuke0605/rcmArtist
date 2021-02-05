@@ -4,7 +4,7 @@
 
    ブラウザlocalhost:8888にアクセスしてアクセスキーを取得
 
-1. src/index.jsにアクセスキーを入力し、npm run buildでコンパイルののち、
+1. src/config/spotify.tsxにアクセスキーを入力し、npm run buildでコンパイルののち、
   
    functionsでnpm run emulators:startでエミュレーターを起動
 
